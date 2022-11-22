@@ -6,7 +6,7 @@
 
 body{
     margin: 0;
-    padding: 10%;
+    padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -24,10 +24,11 @@ img{
 /* Header */
 
 header{
+    padding-top: 10%;
     background-image: url(../img/assiette.jpg);
     background-size: 70vh;
     background-repeat: no-repeat;  /* on ne répète pas l'image */
-    background-position: left; /* on mais l'image à gauche */
+    background-position: 25% bottom; /* on mais l'image à gauche */
     height: 130vh; /* ici vh signifie viewport height, --> il 
                     représente 90% de l'écran de l'utilisateur, peu importe la taille de son écran */
 }
@@ -64,6 +65,7 @@ header nav a:hover{
 }
 
 #line{
+    position: relative;
     width: 80vh;
     margin-top: 2%;
 }
@@ -92,24 +94,24 @@ header nav a:hover{
     padding-right: 20%;
 }
 
-.exemple p{
-    
-}
-
 #line1 {
     margin-right: 0;
-    width: 70%;
+    width: 50%;
 }
 
 .conteneur{
     /* border: 2px solid red; */
-    width: auto;
+    /* width: auto; */
     margin: 0 auto;
+    width: 150vh;
 }
 
 article div{
     /* border: 1px solid var(--blanc); */
-    position: relative; 
+    position: relative;
+    /* flex-direction: column;
+    display: flex;
+    justify-content: space-around; */
 }
 
 .col{
@@ -120,6 +122,37 @@ article div{
 }
 
 .row-1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    justify-content:stretch;
+    align-content: center;
+}
+
+.row-2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    justify-content:stretch;
+    align-content: center;
+}
+
+.row-3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    justify-content:stretch;
+    align-content: center;
+}
+
+
+.row-4{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -246,4 +279,99 @@ footer p {
     font-style: italic;
     text-align: center;
     font-weight: bold;
+}
+
+
+/* MEDIA  */
+@media screen and (max-width:1800px) {
+    .text_img {
+        position: relative;
+        bottom: 140px;
+        text-align: center;
+        color: var(--noir);
+    }
+}
+/* Les media queries pour tablettes */
+@media screen and (min-width:768px) and (max-width:991px) {
+
+    .conteneur{
+        width: auto;
+    }
+    .exemple {
+        text-align: center;
+        padding: auto;
+        margin: auto;
+    }
+    #line1 {
+        margin: 1%;
+        width: 75%;
+    }
+    .row-1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .row-2{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    .row-3{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .row-4{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .conteneur{
+        width: auto;
+    }
+    .exemple {
+        text-align: center;
+        padding: auto;
+        margin: auto;
+    }
+    #line1 {
+        margin: 1%;
+        width: 75%;
+    }
+    
+    .exemple p{
+        text-align: center;
+        padding-left: 20%;
+        margin: auto;
+    }
+    .row-1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .row-2{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    .row-3{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .row-4{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    .text_img {
+        position: relative;
+        bottom: 140px;
+        text-align: center;
+        color: var(--noir);
+    }
+    
 }
