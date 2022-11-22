@@ -1,0 +1,249 @@
+/* //////////////////// CSS  RESTAURANT  //////////////////////// */
+*{
+    /*  nous permet de ne pas modifier la largeur des éléments boîtes même si on leur met un padding (pour les colonnes */
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img{
+    max-width: 100%;/* toutes les images ont une taille max qui est celle de    
+                        leur parent */
+}
+
+/* mes couleurs en variables */
+:root {
+    --blanc: #fff;
+    --noir: #000;
+}
+
+/* Header */
+
+header{
+    background-image: url(../img/assiette.jpg);
+    background-size: 70vh;
+    background-repeat: no-repeat;  /* on ne répète pas l'image */
+    background-position: left; /* on mais l'image à gauche */
+    height: 130vh; /* ici vh signifie viewport height, --> il 
+                    représente 90% de l'écran de l'utilisateur, peu importe la taille de son écran */
+}
+
+header #navigation{ /* on vise la partie #navigation et on écarte 
+    les éléments*/
+display: flex;
+justify-content: space-around;
+flex-direction: column;
+background-color: var(--blanc);
+align-items: center;
+}
+
+header nav a{
+    /* border: 1px solid red; */
+    color: var(--noir);
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    transition: 2s ease; /* la transition arrive "en douceur" */
+    font-family: 'Cormorant';
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+header nav a:hover{
+    border-bottom: solid var(--noir);
+}
+
+
+#en-tete p{
+    margin-top: 0;
+    text-align: center;
+}
+
+#line{
+    width: 80vh;
+    margin-top: 2%;
+}
+
+#en-tete h1{
+    text-align: center;
+    font-family: 'Cormorant';
+    font-size: 5em;
+    text-transform: capitalize;
+    font-weight: lighter;
+    line-height: 1em;
+    margin: 15px 0 0 0;
+    /* border-top: 2px solid var(--noir);
+    border-bottom: 2px solid var(--noir); */
+}
+
+.exemple {
+    display: flex;
+    margin: 0;
+    padding-top: 20%;
+    align-items: flex-end;
+    flex-direction: column;
+    position: relative;
+    /* top: 100px; */
+    text-align: right;
+    padding-right: 20%;
+}
+
+.exemple p{
+    
+}
+
+#line1 {
+    margin-right: 0;
+    width: 70%;
+}
+
+.conteneur{
+    /* border: 2px solid red; */
+    width: auto;
+    margin: 0 auto;
+}
+
+article div{
+    /* border: 1px solid var(--blanc); */
+    position: relative; 
+}
+
+.col{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    /* margin-left: 10%; */
+}
+
+.row-1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    justify-content:stretch;
+    align-content: center;
+}
+
+.col-2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content:stretch;
+    align-content: center;
+}
+
+
+.texte {
+    padding-top: 5%;
+    width: 490px;
+}
+
+.texte h2 {
+    font-family: 'Garamond';
+    font-size: 2.5em;
+}
+
+.texte p {
+    font-family: 'Garamond';
+    font-style: italic;
+    font-size: 130%;
+}
+
+.image img {
+    width: auto;
+    height: auto;
+}
+
+.lanote {
+    background-color: var(--noir);
+    width: 40%;
+    color: var(--blanc);
+}
+
+.lanote p {
+    font-size: medium;
+    font-family: 'Garamond';
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    background-color: var(--noir);
+    color: var(--blanc);
+}
+.rating a {
+    /* float: left; */
+    color: var(--blanc);
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color .4s;
+ }
+
+ .rating p {
+    /* float: left; */
+    color: var(--blanc);
+    text-decoration: none;
+    font-size: 1em;
+    transition: color .4s;
+ }
+
+ .rating a:hover,
+ .rating a:focus,
+ .rating a:hover ~ a,
+ .rating a:focus ~ a {
+    color: orange;
+    cursor: pointer;
+ }
+
+footer img {
+    opacity: 0.5;
+    width: 30vh;
+}
+
+.text_img {
+    position: relative;
+    bottom: 160px;
+    text-align: center;
+    color: var(--noir);
+}
+
+ footer h1{
+    text-align: center;
+    font-family: 'Cormorant';
+    font-size: 5em;
+    text-transform: capitalize;
+    font-weight: lighter;
+    line-height: 1em;
+    margin: 15px 0 0 0;
+}
+footer hr {
+    /* margin-bottom: 1px; */
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Garamond';
+}
+
+#adresse {
+    font-size: 1.5em;
+}
+
+#tel {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#ouverture {
+    font-size: 1em;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
